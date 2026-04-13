@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>골프장 인허가 및 복지지구 지구단위계획 연계 추진방안 회의록 요점</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #f0f0f0;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #122D43;
+}
+
+.deck {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  align-items: flex-start;
+}
+
+.slide {
+  width: 1680px;
+  height: 1163px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 80px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+}
+
+.slide:first-child {
+  background: linear-gradient(135deg, #122D43  0%, #122D43 100%);
+  position: relative;
+}
+
+.slide:first-child .slide__title {
+  display: inline-block;
+  position: relative;
+  padding-top: 0;
+  margin-top: calc(1163px * 1 / 4);
+  padding-bottom: 18px;
+  font-size: 45px;
+  color: #ffffff;
+}
+
+.slide:first-child .slide__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 75%;
+  height: 2px;
+  background: #5c6a77;
+}
+
+.cover__top-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.cover__bottom-text {
+  position: absolute;
+  bottom: 120px;
+  left: 80px;
+  color: #0085AD;
+  text-align: left;
+  font-size: 27px;
+}
+
+.cover__date,
+.cover__team {
+  font-size: inherit;
+  line-height: 1.4;
+}
+
+.cover__team {
+  margin-top: 8px;
+}
+
+.slide__title {
+  padding-top: 40px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #122D43;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+
+.slide__top-rule {
+  width: 100%;
+  height: 1px;
+  margin-top: 10px;
+  background: #5c6a77;
+  flex-shrink: 0;
+}
+
+.slide:first-child .slide__top-rule,
+.slide:first-child .slide__footer {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: transparent;
+  border-top: none;
+}
+
+.slide:first-child .slide__footer {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  bottom: 30px;
+  color: #5c6a77;
+  font-size: 21px;
+}
+
+.slide:first-child .slide__top-rule {
+  display: none;
+  background: transparent;
+}
+
+.slide__headline {
+  padding-top: 20px;
+  padding-bottom: 28px;
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #122D43;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.slide__body {
+  flex: 1;
+  overflow: hidden;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #122D43;
+}
+
+.slide__body h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.slide__body p + p,
+.slide__body p + ul,
+.slide__body p + ol,
+.slide__body ul + p,
+.slide__body ol + p,
+.slide__body ul + ul,
+.slide__body ol + ol {
+  margin-top: 14px;
+}
+
+.slide__body ul,
+.slide__body ol {
+  padding-left: 28px;
+}
+
+.slide__body li + li {
+  margin-top: 8px;
+}
+
+.slide__body strong {
+  font-weight: 700;
+}
+
+.text-accent {
+  color: #0085AD;
+}
+
+.slide:first-child .text-accent {
+  color: #0085AD;
+}
+
+.text-muted {
+  color: #5c6a77;
+}
+
+.slide__footer {
+  flex-shrink: 0;
+  border-top: 2px solid #e2e6ea;
+  padding: 14px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #5c6a77;
+  font-size: 21px;
+}
+
+.footer__left {
+  display: flex;
+  align-items: baseline;
+  min-width: 0;
+  flex: 1;
+}
+
+.footer__logo {
+  font-size: 27px;
+  font-weight: 700;
+  color: #5c6a77;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.footer__logo .blue {
+  color: #0085AD;
+}
+
+.footer__tagline {
+  margin-left: 16px;
+  font-size: 21px;
+  line-height: 1.4;
+  color: #5c6a77;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer__page {
+  font-size: 21px;
+  line-height: 1;
+  color: #5c6a77;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.slide:first-child .footer__page {
+  display: none;
+}
+
+body.present-mode {
+  background: #000000;
+  overflow: hidden;
+}
+
+body.present-mode .deck {
+  padding: 0;
+  gap: 0;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+body.present-mode .slide {
+  display: none;
+  box-shadow: none;
+  transform-origin: center center;
+}
+
+body.present-mode .slide.active {
+  display: flex;
+}
+  </style>
+</head>
+<body class="present-mode">
+  <div class="deck">
+    <section class="slide active">
+      <h1 class="slide__title">골프장 인허가 및 복지지구 지구단위계획 연계 추진방안 미팅 요약 </h1>
+      <div class="slide__top-rule"></div>
+      <div class="slide__headline">단순 체육시설 인허가가 아니라 상위계획, 공원조정, 용도지역, 복지지구 계획이 동시에 맞물린 복합 인허가 사업입니다.</div>
+      <div class="slide__body">
+        <p><strong>보고 목적</strong><br>현재 단계와 핵심 쟁점을 정리하고, 회사 기본 추진방향 및 대외 협의안에 대한 임원 의사결정 포인트를 제시합니다.</p>
+        <p><strong>오늘 판단이 필요한 사항</strong></p>
+        <ul>
+          <li>기본 추진구조: <strong>분리형 우선</strong> 또는 <strong>통합형 우선</strong></li>
+          <li>대외 협의안: 양주시·경기도에 우선 제시할 기본안 확정</li>
+          <li>역할분담: 동명과 서림의 선행계획 및 후속 인허가 책임구조 정리</li>
+        </ul>
+      </div>
+      <div class="slide__footer">
+        <div class="footer__left">
+          <div class="footer__logo">GS <span class="blue">E&amp;C</span></div>
+          <div class="footer__tagline">투명한 신뢰와 끊임없는 혁신으로 더 안전하고 행복한 삶의 미래를 완성합니다</div>
+        </div>
+        <div class="footer__page">1</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="slide__title">1. 현재 단계 및 사업 구조</h2>
+      <div class="slide__top-rule"></div>
+      <div class="slide__headline">현 단계의 본질은 골프장 단독 인허가가 아니라 복지지구와 연동된 선행계획 패키지 설계입니다.</div>
+      <div class="slide__body">
+        <h3>현재 단계</h3>
+        <ul>
+          <li>도시기본계획 일부변경 필요</li>
+          <li>기존 공원 변경 또는 대체 필요</li>
+          <li>골프장 부지 일부의 비도시지역 편입 및 용도지역 변경 필요</li>
+          <li>복지지구 지구단위계획과 정합성 확보 필요</li>
+        </ul>
+        <p><strong>의미</strong><br>개별 인허가를 순차 추진하는 방식보다, 앞단 계획단계에서 구조를 얼마나 정리하느냐가 전체 일정과 승인 가능성을 좌우합니다.</p>
+      </div>
+      <div class="slide__footer">
+        <div class="footer__left">
+          <div class="footer__logo">GS <span class="blue">E&amp;C</span></div>
+          <div class="footer__tagline">투명한 신뢰와 끊임없는 혁신으로 더 안전하고 행복한 삶의 미래를 완성합니다</div>
+        </div>
+        <div class="footer__page">2</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="slide__title">2. 핵심 쟁점 및 주요 리스크</h2>
+      <div class="slide__top-rule"></div>
+      <div class="slide__headline">일정 지연의 핵심 변수는 기술 이슈보다 추진방식, 평가 생략 여부, 책임구조 불명확성입니다.</div>
+      <div class="slide__body">
+        <h3>핵심 쟁점</h3>
+        <ol>
+          <li>복지지구 지구단위계획에 골프장 관련 사항을 어디까지 반영할 것인가</li>
+          <li>공원 변경만 선행할지, 비도시지역 편입 및 용도지역 변경까지 함께 처리할지</li>
+          <li>동명과 서림 중 누가 선행계획과 특수 인허가를 주관하고 최종 책임질 것인가</li>
+        </ol>
+        <p><strong>주요 리스크</strong><br><span class="text-accent">국토계획평가 생략 여부</span>가 일정의 가장 큰 외생 변수이며, 내부적으로는 <strong>용역 범위와 역할분담 미정</strong>이 즉시 해소돼야 할 경영 리스크입니다.</p>
+      </div>
+      <div class="slide__footer">
+        <div class="footer__left">
+          <div class="footer__logo">GS <span class="blue">E&amp;C</span></div>
+          <div class="footer__tagline">투명한 신뢰와 끊임없는 혁신으로 더 안전하고 행복한 삶의 미래를 완성합니다</div>
+        </div>
+        <div class="footer__page">3</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="slide__title">3. 추진안 비교</h2>
+      <div class="slide__top-rule"></div>
+      <div class="slide__headline">완전 분리형은 책임은 명확하지만 재정비 가능성이 높고, 통합형은 일정 효율은 높지만 책임경계가 흐려질 수 있습니다.</div>
+      <div class="slide__body">
+        <h3>안 1. 분리형 추진</h3>
+        <p>동명은 도시기본계획 일부변경 및 복지지구 지구단위계획 변경을 담당하고, 서림은 골프장 인허가·비도시지역 편입·용도지역 변경을 별도 추진.</p>
+        <ul>
+          <li><strong>장점</strong>: 역할과 책임이 비교적 명확, 특수 인허가를 전문업체가 직접 대응</li>
+          <li><strong>단점</strong>: 복지지구 계획 재조정 가능성 높음, 절차 반복 및 일정 지연 우려</li>
+        </ul>
+        <h3>안 2. 통합형 추진</h3>
+        <p>복지지구 지구단위계획 단계에서 골프장 관련 용도지역 및 체육시설 구조까지 반영하고, 후속 인허가는 별도 추진.</p>
+        <ul>
+          <li><strong>장점</strong>: 앞단 구조 일괄 정리, 후속 절차 중복 축소</li>
+          <li><strong>단점</strong>: 동명 과업 확대, 특수 인허가 책임소재 불명확 가능성</li>
+        </ul>
+      </div>
+      <div class="slide__footer">
+        <div class="footer__left">
+          <div class="footer__logo">GS <span class="blue">E&amp;C</span></div>
+          <div class="footer__tagline">투명한 신뢰와 끊임없는 혁신으로 더 안전하고 행복한 삶의 미래를 완성합니다</div>
+        </div>
+        <div class="footer__page">4</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="slide__title">4. 회사 판단 및 권고 구조</h2>
+      <div class="slide__top-rule"></div>
+      <div class="slide__headline">현 시점 권고안은 앞단 계획은 통합 검토하되, 골프장 특수 인허가는 서림이 실질 주도하는 혼합형 구조입니다.</div>
+      <div class="slide__body">
+        <h3>회사 판단</h3>
+        <ul>
+          <li>2040 재수립 반영 방식은 지연 가능성이 커 대안성이 낮음</li>
+          <li>도시기본계획 일부변경 트랙이 상대적으로 신속한 현실 대안</li>
+          <li>완전 분리형보다 <strong>선행계획 통합 + 특수 인허가 분담</strong>이 실무상 가장 현실적</li>
+        </ul>
+        <p><strong>권고 역할분담</strong><br>동명은 복지지구·도시기본계획·공원 및 기반시설 구조를 정리하고, 서림은 골프장 인허가·비도시지역 편입·용도지역 변경 등 특수 인허가를 실질 주도하는 구조가 적정합니다.</p>
+      </div>
+      <div class="slide__footer">
+        <div class="footer__left">
+          <div class="footer__logo">GS <span class="blue">E&amp;C</span></div>
+          <div class="footer__tagline">투명한 신뢰와 끊임없는 혁신으로 더 안전하고 행복한 삶의 미래를 완성합니다</div>
+        </div>
+        <div class="footer__page">5</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="slide__title">5. 가격·구조·일정 관점 검토</h2>
+      <div class="slide__top-rule"></div>
+      <div class="slide__headline">지금 단계의 핵심은 공사비가 아니라 인허가 구조와 공원 대체 논리이며, 이에 따라 추가 용역 범위와 비용 구조가 달라집니다.</div>
+      <div class="slide__body">
+        <h3>가격·구조 관점</h3>
+        <ul>
+          <li><strong>가격</strong>: 현 자료상 확정 금액은 없음. 다만 통합형일수록 선행계획 과업 범위 확대에 따른 추가 용역비 발생 가능</li>
+          <li><strong>구조</strong>: 공원 대체를 계획 논리로 볼지, 공공기여 연계 카드로 볼지에 따라 협의 프레임이 달라짐</li>
+          <li><strong>리스크</strong>: 평가 생략 불가 시 전체 일정 장기화 가능, 대외협의 결과에 따라 계획 범위 재설정 필요</li>
+        </ul>
+        <p><strong>일정 포인트</strong><br>도시기본계획 일부변경 트랙을 기본으로 하되, 양주시·경기도 협의와 국토계획평가 사전 질의 결과가 선행 확정되어야 후속 일정이 안정화됩니다.</p>
+      </div>
+      <div class="slide__footer">
+        <div class="footer__left">
+          <div class="footer__logo">GS <span class="blue">E&amp;C</span></div>
+          <div class="footer__tagline">투명한 신뢰와 끊임없는 혁신으로 더 안전하고 행복한 삶의 미래를 완성합니다</div>
+        </div>
+        <div class="footer__page">6</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="slide__title">6. 대응방향 및 즉시 조치사항</h2>
+      <div class="slide__top-rule"></div>
+      <div class="slide__headline">대외 협의 전에 비교자료, 사전질의, 역할분담안을 먼저 고정해야 내부 판단과 외부 설명력이 확보됩니다.</div>
+      <div class="slide__body">
+        <h3>즉시 조치사항</h3>
+        <ol>
+          <li>동명·서림 각각 안 1·안 2 비교자료 제출</li>
+          <li>양주시 협의에서 행정 처리 가능방식 및 선호 트랙 확인</li>
+          <li>국토계획평가 생략 가능 여부 사전 질의 즉시 착수</li>
+          <li>협의 결과 반영 후 용역 범위와 역할분담 재정리</li>
+        </ol>
+        <p><strong>임원 의사결정 필요사항</strong><br>① 분리형 우선 또는 통합형 우선 방향 설정 ② 공원 대체의 협의 논리 확정 ③ 양주시·경기도 협의 시 우선 제시안 결정.</p>
+      </div>
+      <div class="slide__footer">
+        <div class="footer__left">
+          <div class="footer__logo">GS <span class="blue">E&amp;C</span></div>
+          <div class="footer__tagline">투명한 신뢰와 끊임없는 혁신으로 더 안전하고 행복한 삶의 미래를 완성합니다</div>
+        </div>
+        <div class="footer__page">7</div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+let current = 0;
+
+const FOOTER_TAGLINE = '투명한 신뢰와 끊임없는 혁신으로 더 안전하고 행복한 삶의 미래를 완성합니다';
+const COVER_TEAM = '양주백석TF';
+
+function getSlides() {
+  return Array.from(document.querySelectorAll('.slide'));
+}
+
+function showSlide(n) {
+  const slides = getSlides();
+  const counter = document.getElementById('counter');
+
+  if (slides.length === 0) {
+    if (counter) counter.textContent = '0 / 0';
+    return;
+  }
+
+  if (n < 0) n = 0;
+  if (n > slides.length - 1) n = slides.length - 1;
+  current = n;
+
+  const presentMode = document.body.classList.contains('present-mode');
+
+  slides.forEach((slide, i) => {
+    if (presentMode) {
+      slide.style.display = i === current ? 'flex' : 'none';
+      slide.classList.toggle('active', i === current);
+    } else {
+      slide.style.display = 'flex';
+      slide.classList.remove('active');
+      slide.style.transform = '';
+      slide.style.width = '';
+      slide.style.height = '';
+    }
+  });
+
+  if (counter) counter.textContent = (current + 1) + ' / ' + slides.length;
+
+  if (presentMode) {
+    scaleSlides();
+  }
+}
+
+function nextSlide() {
+  const slides = getSlides();
+  if (slides.length === 0) return;
+  if (current < slides.length - 1) {
+    current += 1;
+    showSlide(current);
+  }
+}
+
+function prevSlide() {
+  const slides = getSlides();
+  if (slides.length === 0) return;
+  if (current > 0) {
+    current -= 1;
+    showSlide(current);
+  }
+}
+
+function scaleSlides() {
+  if (!document.body.classList.contains('present-mode')) return;
+
+  const slides = getSlides();
+  const active = slides[current];
+  if (!active) return;
+
+  const scaleX = window.innerWidth / 1680;
+  const scaleY = window.innerHeight / 1163;
+  const scale = Math.min(scaleX, scaleY);
+
+  slides.forEach((slide) => {
+    slide.style.width = '1680px';
+    slide.style.height = '1163px';
+    slide.style.transform = 'scale(' + scale + ')';
+  });
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nextSlide();
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prevSlide();
+
+  if (e.key === 'p' || e.key === 'P') {
+    document.body.classList.toggle('present-mode');
+    showSlide(current);
+  }
+
+  if (e.key === 'Escape' && document.body.classList.contains('present-mode')) {
+    document.body.classList.remove('present-mode');
+    showSlide(current);
+  }
+});
+
+window.addEventListener('resize', function () {
+  scaleSlides();
+});
+
+window.addEventListener('load', function () {
+  const taglines = document.querySelectorAll('.footer__tagline');
+  taglines.forEach(el => {
+    el.textContent = FOOTER_TAGLINE;
+  });
+
+  const slides = getSlides();
+  const firstSlide = slides[0];
+  if (firstSlide) {
+    const title = firstSlide.querySelector('.slide__title');
+    if (title && !firstSlide.querySelector('.cover__date')) {
+      const bottomWrapper = document.createElement('div');
+      bottomWrapper.className = 'cover__bottom-text';
+
+      const dateEl = document.createElement('div');
+      dateEl.className = 'cover__date';
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      dateEl.textContent = year + '. ' + month + '. ' + day;
+
+      const teamEl = document.createElement('div');
+      teamEl.className = 'cover__team';
+      teamEl.textContent = COVER_TEAM;
+
+      bottomWrapper.appendChild(dateEl);
+      bottomWrapper.appendChild(teamEl);
+      title.parentNode.insertBefore(bottomWrapper, title.nextSibling);
+    }
+  }
+
+  slides.forEach((slide, i) => {
+    const pageEl = slide.querySelector('.footer__page');
+    if (pageEl && i > 0) {
+      pageEl.textContent = i;
+    }
+  });
+
+  showSlide(0);
+});
+  </script>
+</body>
+</html>
